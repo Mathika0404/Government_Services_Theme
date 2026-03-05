@@ -68,7 +68,9 @@ header{
   color:#000;   
 }
 
-.logo-img{width:130px}
+.logo-img{width:180px;
+  height: auto;
+}
 
 .nav__links{
   display:flex;
@@ -1151,7 +1153,7 @@ font-size:11px;
 
 .footer-container{
   display:grid;
-  grid-template-columns:1.5fr 1fr 1fr 1fr;
+  grid-template-columns:1.5fr 1fr 1fr 1fr 1fr;
   gap:40px;
 }
 

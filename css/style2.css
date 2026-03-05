@@ -67,7 +67,9 @@ header{
   color:#000;   
 }
 
-.logo-img{width:130px}
+.logo-img{width:180px;
+  height: auto;
+}
 
 .nav__links{
   display:flex;
@@ -577,7 +579,7 @@ transform:translate(-50%,-50%) scale(1.05);
 
 .footer-container{
   display:grid;
-  grid-template-columns:1.5fr 1fr 1fr 1fr;
+  grid-template-columns:1.5fr 1fr 1fr 1fr 1fr;
   gap:40px;
 }
 
