@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Marketing Website</title>
+
+  <!-- GOOGLE FONT -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+
+  <!-- REMIX ICON -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+<!-- FONT AWESOME -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./css/department.css">
+</head>
+<body>
+
+<!-- LOGIN MODAL -->
+<div id="loginModal" class="login-modal">
+
+  <div class="login-box">
+    <span class="close-btn" onclick="closeLogin()">&times;</span>
+
+    <!-- TITLE -->
+    <h2 id="formTitle">Citizen Services Portal Login</h2>
+    <p id="formSubtitle">Access government services, applications & public records</p>
+
+    <form id="authForm" onsubmit="handleAuthSubmit(event)">
+
+      <!-- SIGNUP ONLY FIELD -->
+      <input type="text"
+             id="departmentName"
+             placeholder="Department / Organization Name"
+             style="display:none;">
+
+      <!-- COMMON FIELDS -->
+      <input type="email"
+             placeholder="Registered Email Address"
+             required>
+
+      <input type="text"
+             placeholder="Citizen ID / Application Number"
+             required>
+
+      <!-- PASSWORD -->
+      <div class="password-field">
+        <input type="password"
+               id="loginPassword"
+               placeholder="Portal Password"
+               required>
+
+        <i class="fa-solid fa-eye-slash toggle-eye"
+           id="eyeIcon"
+           onclick="togglePassword()"></i>
+      </div>
+
+      <!-- SIGNUP ONLY FIELD -->
+      <input type="password"
+             id="confirmPassword"
+             placeholder="Confirm Password"
+             style="display:none;">
+
+      <button type="submit"
+              class="login-submit"
+              id="submitBtn">
+        Access Portal
+      </button>
+
+    </form>
+
+    <!-- SWITCH LINK -->
+    <p class="switch-text">
+      <span id="switchText">New to the citizen services portal?</span>
+      <a href="javascript:void(0)" onclick="toggleAuth()">Create account</a>
+    </p>
+
+  </div>
+
+</div>
+
+<!-- NAVBAR -->
+<header>
+  <nav class="navbar">
+
+    <div class="nav__header">
+      <div class="nav__logo">
+        <a href="index.html">
+          <img src="./images/stackly_logo.webp" class="logo-img" alt="logo">
+        </a>
+      </div>
+
+      <div class="nav__menu__btn" id="menu-btn">
+        <i class="ri-menu-line"></i>
+      </div>
+    </div>
+
+    <ul class="nav__links" id="nav-links">
+      <li class="dropdown">
+        <a href="index.html">Home</a>
+        <i class="ri-arrow-down-s-line arrow"></i>
+        <ul class="dropdown-menu">
+          <li><a href="index2.html">Home Page 2</a></li>
+        </ul>
+      </li>
+
+      <li><a href="about.html">About</a></li>
+      <li><a href="department.html">Department</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="dashboard.html">Dashboard</a></li>
+            <li>
+  <a href="javascript:void(0)" onclick="openLogin()">
+    Login
+  </a>
+</li>
+    </ul>
+
+  </nav>
+</header>
+
+<!-- ================= HERO SECTION ================= -->
+<section class="about-hero">
+
+  <!-- Background GIF -->
+  <img src="images/about_video.gif" class="hero-bg" alt="City Economy">
+
+  <div class="hero-overlay"></div>
+
+<div class="hero-content">
+  <span class="hero-breadcrumb">
+    <a href="index.html">Home</a> / Departments
+  </span>
+
+<h1>Dedicated Government <br> Departments</h1>
+
+  <p>
+    From infrastructure to social welfare, our government departments
+    operate with accountability and commitment to deliver essential
+    services for every citizen.
+  </p>
+</div>
+
+</section>
+
+<section class="dept-section">
+
+  <div class="dept-container">
+
+    <!-- LEFT SIDE -->
+    <div class="dept-left">
+
+      <div class="section-title">
+        <span>DEPARTMENTS</span>
+        <h2>Departments & Information Center</h2>
+        <p>Explore important government services and information.</p>
+      </div>
+
+      <div class="dept-grid">
+
+        <div class="dept-card">
+          <i class="ri-building-4-line"></i>
+          <h4>History & Establishment</h4>
+        </div>
+
+        <div class="dept-card">
+          <i class="ri-line-chart-line"></i>
+          <h4>Government Economy</h4>
+        </div>
+
+        <div class="dept-card">
+          <i class="ri-scales-3-line"></i>
+          <h4>Constitution & Law</h4>
+        </div>
+
+        <div class="dept-card">
+          <i class="ri-global-line"></i>
+          <h4>International Affairs</h4>
+        </div>
+
+        <div class="dept-card">
+          <i class="ri-briefcase-4-line"></i>
+          <h4>Business Administration</h4>
+        </div>
+
+        <div class="dept-card">
+          <i class="ri-megaphone-line"></i>
+          <h4>Budget & Policies</h4>
+        </div>
+
+      </div>
+    </div>
+
+
+<div class="dept-right">
+
+  <h3>Helplines & Emergency Services</h3>
+
+<div class="quick-links">
+
+  <div class="accordion-item">
+    <div class="link-item">
+      <span>Mayor Office</span>
+      <i class="ri-arrow-down-s-line arrow"></i>
+    </div>
+    <div class="accordion-content">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <div class="link-item">
+      <span>City Council</span>
+      <i class="ri-arrow-down-s-line arrow"></i>
+    </div>
+    <div class="accordion-content">
+      <p>City administration and governance updates for citizens.</p>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <div class="link-item">
+      <span>Police Emergency</span>
+      <i class="ri-arrow-down-s-line arrow"></i>
+    </div>
+    <div class="accordion-content">
+      <p>Emergency response and public safety services available 24/7.</p>
+    </div>
+  </div>
+
+</div>
+
+<button class="vacancy-btn" onclick="window.location.href='404.html'">
+  OPEN VACANCIES
+</button>
+
+  <div class="doc-links">
+    <p><i class="ri-file-text-line"></i> 2025 Economy Report</p>
+    <p><i class="ri-file-text-line"></i> 90 Days Plans of CM</p>
+    <p><i class="ri-file-text-line"></i> Court Case about TAX</p>
+  </div>
+
+</div>
+
+  </div>
+
+</section>
+
+<section class="community-dark">
+
+  <div class="community-wrapper">
+
+    <!-- LEFT SIDE -->
+    <div class="explore-dark">
+      <h3>Explore Community</h3>
+
+      <div class="explore-grid">
+
+        <div class="explore-item">
+          <i class="ri-umbrella-line"></i>
+          <span>Beaches & Nightlife</span>
+        </div>
+
+        <div class="explore-item">
+          <i class="ri-tree-line"></i>
+          <span>Parks Nature & Wildlife</span>
+        </div>
+
+        <div class="explore-item">
+          <i class="ri-book-open-line"></i>
+          <span>Education Institutes</span>
+        </div>
+
+        <div class="explore-item">
+          <i class="ri-shield-check-line"></i>
+          <span>Public Safety</span>
+        </div>
+
+        <div class="explore-item">
+          <i class="ri-heart-pulse-line"></i>
+          <span>Health and Welfare</span>
+        </div>
+
+        <div class="explore-item">
+          <i class="ri-bus-line"></i>
+          <span>Transportation</span>
+        </div>
+
+        <div class="explore-item">
+          <i class="ri-film-line"></i>
+          <span>Entertainment</span>
+        </div>
+
+        <div class="explore-item">
+          <i class="ri-football-line"></i>
+          <span>Sports</span>
+        </div>
+
+        <div class="explore-item">
+          <i class="ri-building-line"></i>
+          <span>City Council</span>
+        </div>
+
+        <div class="explore-item">
+          <i class="ri-phone-line"></i>
+          <span>Important Numbers</span>
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- RIGHT SIDE -->
+    <div class="officials-dark">
+
+      <h3>Meet Officials</h3>
+
+      <div class="officials-grid">
+
+        <div class="official-card">
+          <img src="images/department1.webp" alt="">
+          <div class="official-info">
+            <h4>Harry Simon</h4>
+            <span>Assistant Mayor</span>
+          </div>
+        </div>
+
+        <div class="official-card">
+          <img src="images/department2.webp" alt="">
+          <div class="official-info">
+            <h4>Dean Richard</h4>
+            <span>Assistant Mayor</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section class="emergency-news-section">
+
+  <div class="emergency-wrapper">
+
+    <!-- LEFT: Newsletter -->
+    <div class="newsletter-box">
+
+      <h3>Be Updated with us</h3>
+
+      <div class="newsletter-form">
+<form class="newsletter-form" id="newsletterForm">
+  <input type="text" id="name" placeholder="Your Name" required>
+  <input type="email" id="email" placeholder="Email Address" required>
+  <button type="submit">Subscribe</button>
+</form>
+
+<p class="error-msg" id="errorMsg"></p>
+      </div>
+
+      <p>Signup to get the updates on email from the city & town officials.</p>
+
+    </div>
+
+
+    <!-- RIGHT: Emergency Numbers -->
+    <div class="emergency-box">
+
+      <div class="emergency-header">
+        <h3>Emergency Numbers</h3>
+        <div class="info-number">
+          <span>FOR ANY INFORMATION</span>
+          <h4>(08) 00 9876</h4>
+        </div>
+      </div>
+
+      <p class="emergency-sub">Dial these numbers in case of any emergency</p>
+
+      <div class="emergency-cards">
+
+        <div class="emergency-card">
+          <i class="ri-police-car-line"></i>
+          <h2>911</h2>
+          <p>Police Department</p>
+        </div>
+
+        <div class="emergency-card">
+          <i class="ri-hospital-line"></i>
+          <h2>177</h2>
+          <p>Ambulance Services</p>
+        </div>
+
+        <div class="emergency-card">
+          <i class="ri-fire-line"></i>
+          <h2>103</h2>
+          <p>Fire Brigade Department</p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<footer class="gov-footer">
+
+  <div class="footer-container">
+
+    <!-- ABOUT CITY -->
+    <div class="footer-col">
+      <h3>STACKLY</h3>
+      <p>
+        Serving the citizens with transparency and dedication.
+        Providing essential civic services, public welfare programs,
+        and smart city initiatives for sustainable development.
+      </p>
+    </div>
+
+        <!-- QUICK LINKS -->
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="department.html">Department</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- CITY SERVICES -->
+    <div class="footer-col">
+      <h4>City Services</h4>
+      <ul>
+        <li><a href="404.html">Property Tax</a></li>
+        <li><a href="404.html">Water & Sewerage</a></li>
+        <li><a href="404.html">Public Health</a></li>
+        <li><a href="404.html">Urban Planning</a></li>
+        <li><a href="404.html">Birth & Death Certificates</a></li>
+      </ul>
+    </div>
+
+    <!-- MAP -->
+    <div class="footer-col">
+      <h4>Find Us</h4>
+      <div class="map-box">
+        <iframe 
+          src="https://www.google.com/maps?q=Chennai%20Corporation%20Office&output=embed"
+          width="100%" 
+          height="150" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy">
+        </iframe>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- BOTTOM -->
+  <div class="footer-bottom">
+    <p>© 2026 Chennai City Corporation | All Rights Reserved</p>
+  </div>
+
+</footer>
+<script>
+    const items = document.querySelectorAll(".accordion-item");
+
+  items.forEach(item => {
+    item.querySelector(".link-item").addEventListener("click", () => {
+
+      // Close others
+      items.forEach(el => {
+        if(el !== item){
+          el.classList.remove("active");
+        }
+      });
+
+      // Toggle current
+      item.classList.toggle("active");
+    });
+  });
+
+  const form = document.getElementById("newsletterForm");
+  const emailInput = document.getElementById("email");
+  const nameInput = document.getElementById("name");
+  const errorMsg = document.getElementById("errorMsg");
+
+  form.addEventListener("submit", function(e){
+    e.preventDefault(); // stop default submit
+
+    const name = nameInput.value.trim();
+    const email = emailInput.value.trim();
+
+    // Simple email validation
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if(name === ""){
+      errorMsg.textContent = "Please enter your name.";
+      nameInput.classList.add("error");
+      return;
+    }
+
+    if(!emailPattern.test(email)){
+      errorMsg.textContent = "Please enter a valid email address.";
+      emailInput.classList.add("error");
+      return;
+    }
+
+    // If valid → Redirect
+    window.location.href = "404.html";
+  });
+
+  // Remove error styling on typing
+  nameInput.addEventListener("input", () => {
+    nameInput.classList.remove("error");
+    errorMsg.textContent = "";
+  });
+
+  emailInput.addEventListener("input", () => {
+    emailInput.classList.remove("error");
+    errorMsg.textContent = "";
+  });
+</script>
+
+<script src="./js/script.js"></script>
+</body>
+</html>

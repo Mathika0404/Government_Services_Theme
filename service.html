@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Marketing Website</title>
+
+  <!-- GOOGLE FONT -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+
+  <!-- REMIX ICON -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+<!-- FONT AWESOME -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./css/service.css">
+</head>
+<body>
+
+<!-- LOGIN MODAL -->
+<div id="loginModal" class="login-modal">
+
+  <div class="login-box">
+    <span class="close-btn" onclick="closeLogin()">&times;</span>
+
+    <!-- TITLE -->
+    <h2 id="formTitle">Citizen Services Portal Login</h2>
+    <p id="formSubtitle">Access government services, applications & public records</p>
+
+    <form id="authForm" onsubmit="handleAuthSubmit(event)">
+
+      <!-- SIGNUP ONLY FIELD -->
+      <input type="text"
+             id="departmentName"
+             placeholder="Department / Organization Name"
+             style="display:none;">
+
+      <!-- COMMON FIELDS -->
+      <input type="email"
+             placeholder="Registered Email Address"
+             required>
+
+      <input type="text"
+             placeholder="Citizen ID / Application Number"
+             required>
+
+      <!-- PASSWORD -->
+      <div class="password-field">
+        <input type="password"
+               id="loginPassword"
+               placeholder="Portal Password"
+               required>
+
+        <i class="fa-solid fa-eye-slash toggle-eye"
+           id="eyeIcon"
+           onclick="togglePassword()"></i>
+      </div>
+
+      <!-- SIGNUP ONLY FIELD -->
+      <input type="password"
+             id="confirmPassword"
+             placeholder="Confirm Password"
+             style="display:none;">
+
+      <button type="submit"
+              class="login-submit"
+              id="submitBtn">
+        Access Portal
+      </button>
+
+    </form>
+
+    <!-- SWITCH LINK -->
+    <p class="switch-text">
+      <span id="switchText">New to the citizen services portal?</span>
+      <a href="javascript:void(0)" onclick="toggleAuth()">Create account</a>
+    </p>
+
+  </div>
+
+</div>
+
+
+<!-- NAVBAR -->
+<header>
+  <nav class="navbar">
+
+    <div class="nav__header">
+      <div class="nav__logo">
+        <a href="index2.html">
+          <img src="./images/stackly_logo.webp" class="logo-img" alt="logo">
+        </a>
+      </div>
+
+      <div class="nav__menu__btn" id="menu-btn">
+        <i class="ri-menu-line"></i>
+      </div>
+    </div>
+
+    <ul class="nav__links" id="nav-links">
+      <li class="dropdown">
+        <a href="index2.html">Home</a>
+        <i class="ri-arrow-down-s-line arrow"></i>
+        <ul class="dropdown-menu">
+          <li><a href="index.html">Home Page 1</a></li>
+        </ul>
+      </li>
+
+      <li><a href="service.html">Service</a></li>
+      <li><a href="scheme.html">Schemes</a></li>
+      <li><a href="contact2.html">Contact</a></li>
+            <li>
+  <a href="javascript:void(0)" onclick="openLogin()">
+    Login
+  </a>
+</li>
+    </ul>
+
+  </nav>
+</header>
+
+
+<!-- ================= HERO SECTION ================= -->
+<section class="about-hero">
+
+  <!-- Background GIF -->
+  <img src="images/about_video.gif" class="hero-bg" alt="City Economy">
+
+  <div class="hero-overlay"></div>
+
+<div class="hero-content">
+  <span class="hero-breadcrumb">
+    <a href="index2.html">Home</a> / Services
+  </span>
+
+<h1>Government Services Support</h1>
+
+<p>
+Get assistance with online services, public programs, and citizen
+requests through our official governance support team.
+</p>
+</div>
+
+</section>
+
+<section class="gov-services">
+
+<div class="services-container">
+
+<!-- LEFT CONTENT -->
+
+<div class="services-left">
+
+<span class="service-tag">Government Services</span>
+
+<h2>
+Delivering Efficient <br>
+Public Services & <br>
+Transparent Governance
+</h2>
+
+</div>
+
+
+<!-- RIGHT CONTENT -->
+
+<div class="services-right">
+
+<p>
+Our government services are designed to improve accessibility,
+transparency, and efficiency in public administration. Through
+digital platforms and citizen-focused programs, we aim to deliver
+reliable services that support community development and governance.
+</p>
+
+<p>
+Whether you need assistance with permits, public programs, or
+online service requests, our departments are committed to providing
+timely support and clear information for every citizen.
+</p>
+
+
+<h4>Key Government Services</h4>
+
+<div class="service-points">
+
+<div class="point">
+<i class="ri-checkbox-circle-fill"></i>
+<span>Online Public Service Portals</span>
+</div>
+
+<div class="point">
+<i class="ri-checkbox-circle-fill"></i>
+<span>Urban Development & Infrastructure</span>
+</div>
+
+<div class="point">
+<i class="ri-checkbox-circle-fill"></i>
+<span>Citizen Grievance Redressal</span>
+</div>
+
+<div class="point">
+<i class="ri-checkbox-circle-fill"></i>
+<span>Digital Governance Platforms</span>
+</div>
+
+<div class="point">
+<i class="ri-checkbox-circle-fill"></i>
+<span>Public Welfare Programs</span>
+</div>
+
+<div class="point">
+<i class="ri-checkbox-circle-fill"></i>
+<span>Community Development Initiatives</span>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="gov-why">
+
+<div class="why-container">
+
+<!-- LEFT SIDE -->
+
+<div class="why-left">
+
+<span class="why-tag">Why Choose Our Governance Services</span>
+
+<h2>
+Why Choose Our Digital Governance <br>
+Solutions for Citizen Services?
+</h2>
+
+<div class="video-box">
+
+<video autoplay muted loop playsinline>
+<source src="./images/service_video.mp4" type="video/mp4">
+</video>
+
+<a href="404.html" class="play-btn">
+<i class="ri-play-fill"></i>
+</a>
+
+</div>
+
+</div>
+
+
+<!-- RIGHT SIDE -->
+
+<div class="why-right">
+
+<div class="why-card">
+<div class="icon">
+<i class="ri-government-line"></i>
+</div>
+
+<div>
+<h4>Efficient Public Service Delivery</h4>
+<p>Digital platforms improving accessibility and efficiency in government services.</p>
+</div>
+</div>
+
+<div class="why-card">
+<div class="icon">
+<i class="ri-line-chart-line"></i>
+</div>
+
+<div>
+<h4>Data-Driven Governance</h4>
+<p>Technology and analytics supporting better policy decisions and administration.</p>
+</div>
+</div>
+
+<div class="why-card">
+<div class="icon">
+<i class="ri-team-line"></i>
+</div>
+
+<div>
+<h4>Citizen Engagement</h4>
+<p>Grievance systems and feedback platforms connecting citizens with departments.</p>
+</div>
+</div>
+
+<div class="why-card">
+<div class="icon">
+<i class="ri-shield-check-line"></i>
+</div>
+
+<div>
+<h4>Secure Digital Platforms</h4>
+<p>Protecting citizen data while delivering transparent government services.</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="gov-services-grid">
+
+<div class="service-header">
+
+<span class="service-tag">Our Governance Services</span>
+
+<h2>
+Smart Public Services for <br>
+Efficient Digital Governance
+</h2>
+
+</div>
+
+
+<div class="service-grid">
+
+<!-- CARD 1 -->
+
+<div class="service-card">
+
+<div class="service-img">
+<img src="images/service_image1.webp" alt="">
+</div>
+
+<div class="service-content">
+<h4>Public Service Portal</h4>
+<p>Access essential government services through a unified digital platform.</p>
+</div>
+
+</div>
+
+
+<!-- CARD 2 -->
+
+<div class="service-card">
+
+<div class="service-img">
+<img src="images/service_image2.webp" alt="">
+</div>
+
+<div class="service-content">
+<h4>Tax & Revenue Management</h4>
+<p>Digital tax systems improving transparency and financial governance.</p>
+</div>
+
+</div>
+
+
+<!-- CARD 3 -->
+
+<div class="service-card">
+
+<div class="service-img">
+<img src="images/service_image3.webp" alt="">
+</div>
+
+<div class="service-content">
+<h4>Urban Infrastructure</h4>
+<p>Planning and managing modern infrastructure for sustainable cities.</p>
+</div>
+
+</div>
+
+
+<!-- CARD 4 -->
+
+<div class="service-card">
+
+<div class="service-img">
+<img src="images/service_image4.webp" alt="">
+</div>
+
+<div class="service-content">
+<h4>Investment & Development</h4>
+<p>Encouraging economic development through government initiatives.</p>
+</div>
+
+</div>
+
+
+<!-- CARD 5 -->
+
+<div class="service-card">
+
+<div class="service-img">
+<img src="images/service_image5.webp" alt="">
+</div>
+
+<div class="service-content">
+<h4>Citizen Feedback Systems</h4>
+<p>Online grievance portals connecting citizens with departments.</p>
+</div>
+
+</div>
+
+
+<!-- CARD 6 -->
+
+<div class="service-card">
+
+<div class="service-img">
+<img src="images/service_image6.webp" alt="">
+</div>
+
+<div class="service-content">
+<h4>Policy & Planning</h4>
+<p>Strategic governance planning for sustainable urban development.</p>
+</div>
+
+</div>
+
+
+<!-- CARD 7 -->
+
+<div class="service-card">
+
+<div class="service-img">
+<img src="images/service_image7.webp" alt="">
+</div>
+
+<div class="service-content">
+<h4>Digital Identity Services</h4>
+<p>Secure citizen identity verification for public services.</p>
+</div>
+
+</div>
+
+
+<!-- CARD 8 -->
+
+<div class="service-card">
+
+<div class="service-img">
+<img src="images/service_image8.webp" alt="">
+</div>
+
+<div class="service-content">
+<h4>Administrative Support</h4>
+<p>Improving operational efficiency in public administration.</p>
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<footer class="gov-footer">
+
+  <div class="footer-container">
+
+    <!-- ABOUT CITY -->
+    <div class="footer-col">
+      <h3>STACKLY</h3>
+      <p>
+        Serving the citizens with transparency and dedication.
+        Providing essential civic services, public welfare programs,
+        and smart city initiatives for sustainable development.
+      </p>
+    </div>
+
+        <!-- QUICK LINKS -->
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index2.html">Home</a></li>
+        <li><a href="service.html">Service</a></li>
+        <li><a href="scheme.html">Schemes</a></li>
+        <li><a href="contact2.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- CITY SERVICES -->
+    <div class="footer-col">
+      <h4>City Services</h4>
+      <ul>
+        <li><a href="404.html">Property Tax</a></li>
+        <li><a href="404.html">Water & Sewerage</a></li>
+        <li><a href="404.html">Public Health</a></li>
+        <li><a href="404.html">Urban Planning</a></li>
+        <li><a href="404.html">Birth & Death Certificates</a></li>
+      </ul>
+    </div>
+
+    <!-- MAP -->
+    <div class="footer-col">
+      <h4>Find Us</h4>
+      <div class="map-box">
+        <iframe 
+          src="https://www.google.com/maps?q=Chennai%20Corporation%20Office&output=embed"
+          width="100%" 
+          height="150" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy">
+        </iframe>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- BOTTOM -->
+  <div class="footer-bottom">
+    <p>© 2026 Chennai City Corporation | All Rights Reserved</p>
+  </div>
+
+</footer>
+<script>
+  const form = document.getElementById("contactForm");
+
+form.addEventListener("submit", function(e){
+
+e.preventDefault();
+
+let isValid = true;
+
+let name = document.getElementById("name").value.trim();
+let email = document.getElementById("email").value.trim();
+let phone = document.getElementById("phone").value.trim();
+let subject = document.getElementById("subject").value.trim();
+let message = document.getElementById("message").value.trim();
+
+let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+// clear errors
+document.querySelectorAll(".error").forEach(e => e.textContent="");
+
+if(name === ""){
+document.getElementById("nameError").textContent="Name is required";
+isValid=false;
+}
+
+if(email === ""){
+document.getElementById("emailError").textContent="Email is required";
+isValid=false;
+}
+else if(!emailPattern.test(email)){
+document.getElementById("emailError").textContent="Enter a valid email address";
+isValid=false;
+}
+
+if(phone === ""){
+document.getElementById("phoneError").textContent="Phone number is required";
+isValid=false;
+}
+
+if(subject === ""){
+document.getElementById("subjectError").textContent="Subject is required";
+isValid=false;
+}
+
+if(message === ""){
+document.getElementById("messageError").textContent="Message is required";
+isValid=false;
+}
+
+if(isValid){
+window.location.href="404.html";
+}
+
+});
+</script>
+<script src="./js/script.js"></script>
+</body>
+</html>
+</body>
+</html>

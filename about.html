@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Marketing Website</title>
+
+  <!-- GOOGLE FONT -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+
+  <!-- REMIX ICON -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+<!-- FONT AWESOME -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./css/about.css">
+</head>
+<body>
+
+<!-- LOGIN MODAL -->
+<div id="loginModal" class="login-modal">
+
+  <div class="login-box">
+    <span class="close-btn" onclick="closeLogin()">&times;</span>
+
+    <!-- TITLE -->
+    <h2 id="formTitle">Citizen Services Portal Login</h2>
+    <p id="formSubtitle">Access government services, applications & public records</p>
+
+    <form id="authForm" onsubmit="handleAuthSubmit(event)">
+
+      <!-- SIGNUP ONLY FIELD -->
+      <input type="text"
+             id="departmentName"
+             placeholder="Department / Organization Name"
+             style="display:none;">
+
+      <!-- COMMON FIELDS -->
+      <input type="email"
+             placeholder="Registered Email Address"
+             required>
+
+      <input type="text"
+             placeholder="Citizen ID / Application Number"
+             required>
+
+      <!-- PASSWORD -->
+      <div class="password-field">
+        <input type="password"
+               id="loginPassword"
+               placeholder="Portal Password"
+               required>
+
+        <i class="fa-solid fa-eye-slash toggle-eye"
+           id="eyeIcon"
+           onclick="togglePassword()"></i>
+      </div>
+
+      <!-- SIGNUP ONLY FIELD -->
+      <input type="password"
+             id="confirmPassword"
+             placeholder="Confirm Password"
+             style="display:none;">
+
+      <button type="submit"
+              class="login-submit"
+              id="submitBtn">
+        Access Portal
+      </button>
+
+    </form>
+
+    <!-- SWITCH LINK -->
+    <p class="switch-text">
+      <span id="switchText">New to the citizen services portal?</span>
+      <a href="javascript:void(0)" onclick="toggleAuth()">Create account</a>
+    </p>
+
+  </div>
+
+</div>
+
+<!-- NAVBAR -->
+<header>
+  <nav class="navbar">
+
+    <div class="nav__header">
+      <div class="nav__logo">
+        <a href="index.html">
+          <img src="./images/stackly_logo.webp" class="logo-img" alt="logo">
+        </a>
+      </div>
+
+      <div class="nav__menu__btn" id="menu-btn">
+        <i class="ri-menu-line"></i>
+      </div>
+    </div>
+
+    <ul class="nav__links" id="nav-links">
+      <li class="dropdown">
+        <a href="index.html">Home</a>
+        <i class="ri-arrow-down-s-line arrow"></i>
+        <ul class="dropdown-menu">
+          <li><a href="index2.html">Home Page 2</a></li>
+        </ul>
+      </li>
+
+      <li><a href="about.html">About</a></li>
+      <li><a href="department.html">Department</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="dashboard.html">Dashboard</a></li>
+            <li>
+  <a href="javascript:void(0)" onclick="openLogin()">
+    Login
+  </a>
+</li>
+    </ul>
+
+  </nav>
+</header>
+
+<!-- ================= HERO SECTION ================= -->
+<section class="about-hero">
+
+  <!-- Background GIF -->
+  <img src="images/about_video.gif" class="hero-bg" alt="City Economy">
+
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+    <span class="hero-breadcrumb">
+  <a href="index.html">Home</a> / About Us
+    </span>
+    <h1>Support us to Become <br> Strong Economy</h1>
+    <p>Follow the Democracy for Good Governance in our Country</p>
+  </div>
+
+</section>
+
+
+<!-- ================= MAYOR SECTION ================= -->
+<section class="mayor-section">
+
+  <div class="mayor-container">
+
+    <!-- LEFT IMAGE -->
+    <div class="mayor-image">
+      <img src="images/about_hero_image.webp" alt="Mayor">
+
+      <!-- Play Button -->
+<a href="404.html" class="play-btns">
+  ▶
+</a>
+    </div>
+
+    <!-- RIGHT CONTENT -->
+    <div class="mayor-content">
+      <span class="mayor-tag">MAYOR OF CITY</span>
+      <h3>Welcome to Visit your City</h3>
+      <p>
+        The highest glory of the citizen’s revolution was that it connected
+        in one indissoluble bond the principles of Government with the
+        principles of humanity. Strong governance builds a powerful economy
+        and sustainable future.
+      </p>
+
+      <h4>Edward Robert</h4>
+      <small>Mayor of the City</small>
+    </div>
+
+  </div>
+
+</section>
+
+<section class="city-timeline">
+
+  <div class="timeline-header">
+    <span>OUR CITY JOURNEY</span>
+    <h2>Corporation Growth & Development</h2>
+  </div>
+
+  <!-- ITEM 1 -->
+  <div class="timeline-item">
+
+    <div class="timeline-image-wrapper">
+
+      <div class="timeline-image-bg"></div>
+
+      <div class="timeline-image">
+        <img src="images/about1.webp" alt="">
+        <a href="404.html" class="play-btn">▶</a>
+      </div>
+
+      <!-- Vertical Year -->
+      <span class="timeline-year-vertical">
+        <span>1</span>
+        <span>9</span>
+        <span>8</span>
+        <span>4</span>
+      </span>
+
+    </div>
+
+    <div class="timeline-content">
+      <h3>Foundation of Modern Governance</h3>
+      <p>
+        The corporation established structured governance systems,
+        economic planning, and administrative reforms to strengthen
+        public services and infrastructure.
+      </p>
+      <a href="404.html" class="timeline-btn">Learn More</a>
+    </div>
+
+  </div>
+
+
+  <!-- ITEM 2 -->
+  <div class="timeline-item reverse">
+
+    <div class="timeline-image-wrapper">
+
+      <div class="timeline-image-bg"></div>
+
+      <div class="timeline-image">
+        <img src="images/about2.webp" alt="">
+        <a href="404.html" class="play-btn">▶</a>
+      </div>
+
+      <span class="timeline-year-vertical">
+        <span>1</span>
+        <span>9</span>
+        <span>9</span>
+        <span>0</span>
+      </span>
+
+    </div>
+
+    <div class="timeline-content">
+      <h3>Clean & Green City Initiative</h3>
+      <p>
+        Major environmental reforms improved sanitation systems,
+        waste management, and public awareness programs.
+      </p>
+      <a href="404.html" class="timeline-btn">Learn More</a>
+    </div>
+
+  </div>
+
+
+  <!-- ITEM 3 -->
+  <div class="timeline-item">
+
+    <div class="timeline-image-wrapper">
+
+      <div class="timeline-image-bg"></div>
+
+      <div class="timeline-image">
+        <img src="images/about3.webp" alt="">
+        <a href="404.html" class="play-btn">▶</a>
+      </div>
+
+      <span class="timeline-year-vertical">
+        <span>2</span>
+        <span>0</span>
+        <span>1</span>
+        <span>0</span>
+      </span>
+
+    </div>
+
+    <div class="timeline-content">
+      <h3>Digital Governance Reform</h3>
+      <p>
+        Introduction of digital portals, transparent systems,
+        and smart infrastructure modernized the administration.
+      </p>
+      <a href="404.html" class="timeline-btn">Learn More</a>
+    </div>
+
+  </div>
+
+
+  <!-- ITEM 4 -->
+  <div class="timeline-item reverse">
+
+    <div class="timeline-image-wrapper">
+
+      <div class="timeline-image-bg"></div>
+
+      <div class="timeline-image">
+        <img src="images/about4.webp" alt="">
+        <a href="404.html" class="play-btn">▶</a>
+      </div>
+
+      <span class="timeline-year-vertical">
+        <span>2</span>
+        <span>0</span>
+        <span>2</span>
+        <span>0</span>
+      </span>
+
+    </div>
+
+    <div class="timeline-content">
+      <h3>Smart City Transformation</h3>
+      <p>
+        Smart mobility, surveillance systems, renewable energy,
+        and economic growth initiatives shaped a sustainable future.
+      </p>
+      <a href="404.html" class="timeline-btn">Learn More</a>
+    </div>
+
+  </div>
+
+</section>
+
+<footer class="gov-footer">
+
+  <div class="footer-container">
+
+    <!-- ABOUT CITY -->
+    <div class="footer-col">
+      <h3>STACKLY</h3>
+      <p>
+        Serving the citizens with transparency and dedication.
+        Providing essential civic services, public welfare programs,
+        and smart city initiatives for sustainable development.
+      </p>
+    </div>
+
+        <!-- QUICK LINKS -->
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="department.html">Department</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- CITY SERVICES -->
+    <div class="footer-col">
+      <h4>City Services</h4>
+      <ul>
+        <li><a href="404.html">Property Tax</a></li>
+        <li><a href="404.html">Water & Sewerage</a></li>
+        <li><a href="404.html">Public Health</a></li>
+        <li><a href="404.html">Urban Planning</a></li>
+        <li><a href="404.html">Birth & Death Certificates</a></li>
+      </ul>
+    </div>
+
+    <!-- MAP -->
+    <div class="footer-col">
+      <h4>Find Us</h4>
+      <div class="map-box">
+        <iframe 
+          src="https://www.google.com/maps?q=Chennai%20Corporation%20Office&output=embed"
+          width="100%" 
+          height="150" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy">
+        </iframe>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- BOTTOM -->
+  <div class="footer-bottom">
+    <p>© 2026 Chennai City Corporation | All Rights Reserved</p>
+  </div>
+
+</footer>
+
+<script src="./js/script.js"></script>
+</body>
+</html>

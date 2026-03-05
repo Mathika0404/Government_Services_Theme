@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>City Governance Dashboard</title>
+
+<link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<link rel="stylesheet" href="./css/dashboard.css">
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+<!-- SIDEBAR -->
+<aside class="gov-sidebar">
+
+<div class="logo">
+<span class="logo-box">G</span>
+<h2>GovCity</h2>
+</div>
+
+<ul class="menu">
+
+<li class="menu-item active">
+<i class="ri-dashboard-line"></i> Dashboard
+</li>
+
+<li class="menu-item">
+<i class="ri-user-3-line"></i> Citizens
+</li>
+
+<li class="dropdown">
+
+<div class="dropdown-toggle">
+<i class="ri-government-line"></i>
+<span>Departments</span>
+<i class="ri-arrow-down-s-line arrow"></i>
+</div>
+
+<ul class="submenu">
+<li><i class="ri-hospital-line"></i>Health</li>
+<li><i class="ri-road-map-line"></i>Transport</li>
+<li><i class="ri-building-line"></i>Urban Planning</li>
+<li><i class="ri-water-flash-line"></i>Water Supply</li>
+<li><i class="ri-shield-check-line"></i>Public Safety</li>
+</ul>
+
+</li>
+
+<li class="menu-item">
+<i class="ri-bar-chart-line"></i> Analytics
+</li>
+
+<li class="menu-item">
+<i class="ri-calendar-event-line"></i> City Events
+</li>
+
+<li class="menu-item">
+<i class="ri-settings-3-line"></i> Settings
+</li>
+
+</ul>
+
+</aside>
+
+
+<!-- MAIN CONTENT -->
+<main class="main-content">
+
+<!-- HEADER -->
+<section class="dashboard-top">
+
+<div class="welcome-box">
+
+<div class="user-info">
+
+<img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
+
+<div>
+<h2>Hello, City Administrator 👋</h2>
+<p>Welcome to Smart Governance Portal</p>
+</div>
+
+</div>
+
+<div class="search-box">
+<i class="ri-search-line"></i>
+<input type="text" placeholder="Search services...">
+</div>
+
+<div class="notification">
+<i class="ri-notification-3-line"></i>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- STAT CARDS -->
+<section class="gov-stats">
+
+<div class="stat-card">
+<p>Total Citizens</p>
+<h2>10,971,000</h2>
+<span class="growth up">↑ 4.2%</span>
+</div>
+
+<div class="stat-card">
+<p>Service Requests</p>
+<h2>52,436</h2>
+<span class="growth down">↓ 1.1%</span>
+</div>
+
+<div class="stat-card">
+<p>Public Complaints</p>
+<h2>8,240</h2>
+<span class="growth up">↑ 2.8%</span>
+</div>
+
+<div class="stat-card">
+<p>Service Satisfaction</p>
+<h2>91.4%</h2>
+<span class="growth up">↑ 1.9%</span>
+</div>
+
+</section>
+
+
+<!-- ANALYTICS -->
+<section class="gov-analytics">
+
+<!-- LINE CHART -->
+<div class="analytics-card">
+
+<div class="card-header">
+<h3>City Service Analytics</h3>
+
+<select>
+<option>This Week</option>
+<option>This Month</option>
+</select>
+
+</div>
+
+<canvas id="serviceChart"></canvas>
+
+</div>
+
+
+<!-- DONUT -->
+<div class="analytics-card">
+
+<h3>Government Budget Allocation</h3>
+
+<canvas id="budgetChart"></canvas>
+
+</div>
+
+
+<!-- RIGHT PANEL -->
+<div class="analytics-card right-panel">
+
+<h3>Service Efficiency</h3>
+
+<div class="circle-box">
+
+<div class="circle">
+<span>82%</span>
+<p>Public Health</p>
+</div>
+
+<div class="circle">
+<span>67%</span>
+<p>Transport</p>
+</div>
+
+<div class="circle">
+<span>74%</span>
+<p>Water Supply</p>
+</div>
+
+</div>
+
+<h3 class="citizen-title">Total Citizens</h3>
+
+<h2>10,971,000</h2>
+
+<div class="citizen-bar">
+<div class="male">52%</div>
+<div class="female">48%</div>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- SERVICE HISTORY -->
+<section class="gov-services-history">
+
+<div class="services-header">
+
+<h3>Government Service Activity</h3>
+
+<div class="service-time">
+<button class="active">Today</button>
+<button>7D</button>
+<button>1M</button>
+<button>3M</button>
+<button>1Y</button>
+</div>
+
+</div>
+
+
+<div class="services-table">
+
+<div class="service-row header">
+<span>#</span>
+<span>Department</span>
+<span>Service</span>
+<span>Requests (24H)</span>
+<span>Change</span>
+<span>Status</span>
+<span>Action</span>
+</div>
+
+
+<!-- ROW 1 -->
+<div class="service-row data">
+
+<span>01</span>
+
+<span class="dept">
+<i class="ri-hospital-line"></i>
+Health Services
+</span>
+
+<span>Emergency Support</span>
+
+<span class="requests">
+<i class="ri-bar-chart-grouped-line"></i>
+<span class="req-num">1,245</span>
+</span>
+
+<span class="change up">+3.4%</span>
+
+<span class="status active">Operational</span>
+
+<button class="action-btn">View</button>
+
+</div>
+
+
+<!-- ROW 2 -->
+<div class="service-row data">
+
+<span>02</span>
+
+<span class="dept">
+<i class="ri-road-map-line"></i>
+Transport
+</span>
+
+<span>Traffic Monitoring</span>
+
+<span class="requests">
+<i class="ri-bar-chart-grouped-line"></i>
+<span class="req-num">3,120</span>
+</span>
+
+<span class="change down">-1.2%</span>
+
+<span class="status active">Operational</span>
+
+<button class="action-btn">View</button>
+
+</div>
+
+
+<!-- ROW 3 -->
+<div class="service-row data">
+
+<span>03</span>
+
+<span class="dept">
+<i class="ri-building-line"></i>
+Urban Planning
+</span>
+
+<span>Infrastructure Requests</span>
+
+<span class="requests">
+<i class="ri-bar-chart-grouped-line"></i>
+<span class="req-num">892</span>
+</span>
+
+<span class="change up">+2.1%</span>
+
+<span class="status active">Operational</span>
+
+<button class="action-btn">View</button>
+
+</div>
+
+
+<!-- ROW 4 -->
+<div class="service-row data">
+
+<span>04</span>
+
+<span class="dept">
+<i class="ri-water-flash-line"></i>
+Water Supply
+</span>
+
+<span>Water Complaints</span>
+
+<span class="requests">
+<i class="ri-bar-chart-grouped-line"></i>
+<span class="req-num">542</span>
+</span>
+
+<span class="change down">-0.8%</span>
+
+<span class="status maintenance">Maintenance</span>
+
+<button class="action-btn">View</button>
+
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+</div>
+
+
+<script>
+
+/* SIDEBAR DROPDOWN */
+
+document.querySelector(".dropdown-toggle").onclick=function(){
+this.parentElement.classList.toggle("active");
+}
+
+
+/* LINE CHART */
+
+new Chart(document.getElementById("serviceChart"),{
+
+type:"line",
+
+data:{
+labels:["Mon","Tue","Wed","Thu","Fri","Sat","Sun"],
+
+datasets:[
+
+{
+label:"Health",
+data:[2200,2100,2500,2400,2700,2600,3000],
+borderColor:"#6c7cff",
+tension:.4
+},
+
+{
+label:"Transport",
+data:[1200,1500,1400,1700,1600,1800,1750],
+borderColor:"#9c6cff",
+tension:.4
+}
+
+]
+},
+
+options:{
+plugins:{legend:{labels:{color:"#fff"}}},
+scales:{
+x:{ticks:{color:"#aaa"}},
+y:{ticks:{color:"#aaa"}}
+}
+}
+
+});
+
+
+/* DONUT */
+
+new Chart(document.getElementById("budgetChart"),{
+
+type:"doughnut",
+
+data:{
+labels:["Health","Transport","Urban","Water"],
+
+datasets:[{
+data:[35,25,20,20],
+backgroundColor:["#6c7cff","#9c6cff","#4cc9f0","#4ade80"]
+}]
+},
+
+options:{
+plugins:{legend:{labels:{color:"#fff"}}}
+}
+
+});
+
+
+/* SERVICE HISTORY FILTER */
+
+const buttons=document.querySelectorAll(".service-time button");
+const rows=document.querySelectorAll(".service-row.data");
+
+const dataset={
+
+today:[
+{req:"1,245",change:"+3.4%",status:"Operational"},
+{req:"3,120",change:"-1.2%",status:"Operational"},
+{req:"892",change:"+2.1%",status:"Operational"},
+{req:"542",change:"-0.8%",status:"Maintenance"}
+],
+
+d7:[
+{req:"6,820",change:"+5.2%",status:"Operational"},
+{req:"12,420",change:"+2.1%",status:"Operational"},
+{req:"3,421",change:"+1.8%",status:"Operational"},
+{req:"1,102",change:"-2.4%",status:"Maintenance"}
+],
+
+m1:[
+{req:"24,500",change:"+7.5%",status:"Operational"},
+{req:"41,300",change:"+3.2%",status:"Operational"},
+{req:"13,240",change:"+2.9%",status:"Operational"},
+{req:"4,210",change:"-3.5%",status:"Maintenance"}
+]
+
+};
+
+
+buttons.forEach(btn=>{
+
+btn.addEventListener("click",()=>{
+
+buttons.forEach(b=>b.classList.remove("active"));
+btn.classList.add("active");
+
+let key=btn.innerText.toLowerCase();
+
+if(key==="today") update(dataset.today);
+if(key==="7d") update(dataset.d7);
+if(key==="1m") update(dataset.m1);
+
+});
+
+});
+
+
+function update(arr){
+
+rows.forEach((row,i)=>{
+
+row.querySelector(".req-num").textContent=arr[i].req;
+
+let change=row.querySelector(".change");
+
+change.textContent=arr[i].change;
+
+if(arr[i].change.includes("+")){
+change.className="change up";
+}else{
+change.className="change down";
+}
+
+let status=row.querySelector(".status");
+
+status.textContent=arr[i].status;
+
+if(arr[i].status==="Operational"){
+status.className="status active";
+}else{
+status.className="status maintenance";
+}
+
+});
+
+}
+
+</script>
+
+</body>
+</html>

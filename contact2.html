@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Marketing Website</title>
+
+  <!-- GOOGLE FONT -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+
+  <!-- REMIX ICON -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+<!-- FONT AWESOME -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./css/contact2.css">
+</head>
+<body>
+
+<!-- LOGIN MODAL -->
+<div id="loginModal" class="login-modal">
+
+  <div class="login-box">
+    <span class="close-btn" onclick="closeLogin()">&times;</span>
+
+    <!-- TITLE -->
+    <h2 id="formTitle">Citizen Services Portal Login</h2>
+    <p id="formSubtitle">Access government services, applications & public records</p>
+
+    <form id="authForm" onsubmit="handleAuthSubmit(event)">
+
+      <!-- SIGNUP ONLY FIELD -->
+      <input type="text"
+             id="departmentName"
+             placeholder="Department / Organization Name"
+             style="display:none;">
+
+      <!-- COMMON FIELDS -->
+      <input type="email"
+             placeholder="Registered Email Address"
+             required>
+
+      <input type="text"
+             placeholder="Citizen ID / Application Number"
+             required>
+
+      <!-- PASSWORD -->
+      <div class="password-field">
+        <input type="password"
+               id="loginPassword"
+               placeholder="Portal Password"
+               required>
+
+        <i class="fa-solid fa-eye-slash toggle-eye"
+           id="eyeIcon"
+           onclick="togglePassword()"></i>
+      </div>
+
+      <!-- SIGNUP ONLY FIELD -->
+      <input type="password"
+             id="confirmPassword"
+             placeholder="Confirm Password"
+             style="display:none;">
+
+      <button type="submit"
+              class="login-submit"
+              id="submitBtn">
+        Access Portal
+      </button>
+
+    </form>
+
+    <!-- SWITCH LINK -->
+    <p class="switch-text">
+      <span id="switchText">New to the citizen services portal?</span>
+      <a href="javascript:void(0)" onclick="toggleAuth()">Create account</a>
+    </p>
+
+  </div>
+
+</div>
+
+<!-- NAVBAR -->
+<header>
+  <nav class="navbar">
+
+    <div class="nav__header">
+      <div class="nav__logo">
+        <a href="index2.html">
+          <img src="./images/stackly_logo.webp" class="logo-img" alt="logo">
+        </a>
+      </div>
+
+      <div class="nav__menu__btn" id="menu-btn">
+        <i class="ri-menu-line"></i>
+      </div>
+    </div>
+
+    <ul class="nav__links" id="nav-links">
+      <li class="dropdown">
+        <a href="index2.html">Home</a>
+        <i class="ri-arrow-down-s-line arrow"></i>
+        <ul class="dropdown-menu">
+          <li><a href="index.html">Home Page 1</a></li>
+        </ul>
+      </li>
+
+      <li><a href="service.html">Service</a></li>
+      <li><a href="scheme.html">Schemes</a></li>
+      <li><a href="contact2.html">Contact</a></li>
+            <li>
+  <a href="javascript:void(0)" onclick="openLogin()">
+    Login
+  </a>
+</li>
+    </ul>
+
+  </nav>
+</header>
+
+
+<!-- ================= HERO SECTION ================= -->
+<section class="about-hero">
+
+  <!-- Background GIF -->
+  <img src="images/about_video.gif" class="hero-bg" alt="City Economy">
+
+  <div class="hero-overlay"></div>
+
+<div class="hero-content">
+  <span class="hero-breadcrumb">
+    <a href="index2.html">Home</a> / Contact Us
+  </span>
+
+<h1>Contact Your Government <br> Support Team</h1>
+
+<p>
+  Have questions or need assistance with government services? 
+  Contact our support team for quick help and reliable information.
+</p>
+</div>
+
+</section>
+
+<section class="gov-contact">
+
+  <div class="gov-contact-wrapper">
+
+    <!-- EMAIL -->
+    <div class="gov-contact-card">
+      <div class="icon">
+        <i class="ri-mail-line"></i>
+      </div>
+      <h3>Send us an Email</h3>
+      <p>
+        Reach out to our government support team for inquiries,
+        assistance, or service requests.
+      </p>
+      <span>support@citygov.in</span>
+    </div>
+
+    <!-- CALL -->
+    <div class="gov-contact-card">
+      <div class="icon">
+        <i class="ri-phone-line"></i>
+      </div>
+      <h3>Call the Help Desk</h3>
+      <p>
+        Speak directly with our citizen support center for
+        immediate help and service guidance.
+      </p>
+      <span>+91 44 2561 9200</span>
+    </div>
+
+    <!-- MESSAGE -->
+    <div class="gov-contact-card">
+      <div class="icon">
+        <i class="ri-message-2-line"></i>
+      </div>
+      <h3>Send a Message</h3>
+      <p>
+        Submit your feedback or service requests through
+        our citizen communication channel.
+      </p>
+      <span>Message Support</span>
+    </div>
+
+  </div>
+
+</section>
+
+<section class="contact-section">
+
+  <!-- TOP HEADING (IMAGE 1 STYLE) -->
+  <div class="contact-heading">
+    <span>CONTACT US</span>
+    <h2>Get in touch with us today</h2>
+    <p>
+      Reach out to our government support team for assistance, service
+      inquiries, and citizen support.
+    </p>
+  </div>
+
+  <!-- CONTACT AREA -->
+  <div class="contact-container">
+
+    <!-- LEFT IMAGE -->
+    <div class="contact-image">
+      <img src="images/contact_image.webp" alt="Support Team">
+      
+      <div class="social-icons">
+        <span>Social Media:</span>
+        <i class="ri-facebook-fill"></i>
+        <i class="ri-linkedin-fill"></i>
+        <i class="ri-twitter-x-fill"></i>
+        <i class="ri-pinterest-fill"></i>
+      </div>
+    </div>
+
+<form id="contactForm">
+
+<div class="form-row">
+  <div class="input-group">
+    <i class="ri-user-line"></i>
+    <input type="text" id="name" placeholder="Name">
+  </div>
+  <small class="error" id="nameError"></small>
+
+  <div class="input-group">
+    <i class="ri-mail-line"></i>
+    <input type="text" id="email" placeholder="Email Address">
+  </div>
+  <small class="error" id="emailError"></small>
+</div>
+
+<div class="form-row">
+  <div class="input-group">
+    <i class="ri-phone-line"></i>
+    <input type="text" id="phone" placeholder="Phone">
+  </div>
+  <small class="error" id="phoneError"></small>
+
+  <div class="input-group">
+    <i class="ri-chat-1-line"></i>
+    <input type="text" id="subject" placeholder="Subject">
+  </div>
+  <small class="error" id="subjectError"></small>
+</div>
+
+<div class="input-group textarea">
+  <i class="ri-edit-line"></i>
+  <textarea id="message" placeholder="How can we help you?"></textarea>
+</div>
+<small class="error" id="messageError"></small>
+
+<button type="submit" class="send-btn">SEND MESSAGE</button>
+
+</form>
+
+  </div>
+
+</section>
+
+<footer class="gov-footer">
+
+  <div class="footer-container">
+
+    <!-- ABOUT CITY -->
+    <div class="footer-col">
+      <h3>STACKLY</h3>
+      <p>
+        Serving the citizens with transparency and dedication.
+        Providing essential civic services, public welfare programs,
+        and smart city initiatives for sustainable development.
+      </p>
+    </div>
+
+        <!-- QUICK LINKS -->
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index2.html">Home</a></li>
+        <li><a href="service.html">Service</a></li>
+        <li><a href="scheme.html">Schemes</a></li>
+        <li><a href="contact2.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- CITY SERVICES -->
+    <div class="footer-col">
+      <h4>City Services</h4>
+      <ul>
+        <li><a href="404.html">Property Tax</a></li>
+        <li><a href="404.html">Water & Sewerage</a></li>
+        <li><a href="404.html">Public Health</a></li>
+        <li><a href="404.html">Urban Planning</a></li>
+        <li><a href="404.html">Birth & Death Certificates</a></li>
+      </ul>
+    </div>
+
+    <!-- MAP -->
+    <div class="footer-col">
+      <h4>Find Us</h4>
+      <div class="map-box">
+        <iframe 
+          src="https://www.google.com/maps?q=Chennai%20Corporation%20Office&output=embed"
+          width="100%" 
+          height="150" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy">
+        </iframe>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- BOTTOM -->
+  <div class="footer-bottom">
+    <p>© 2026 Chennai City Corporation | All Rights Reserved</p>
+  </div>
+
+</footer>
+<script>
+  const form = document.getElementById("contactForm");
+
+form.addEventListener("submit", function(e){
+
+e.preventDefault();
+
+let isValid = true;
+
+let name = document.getElementById("name").value.trim();
+let email = document.getElementById("email").value.trim();
+let phone = document.getElementById("phone").value.trim();
+let subject = document.getElementById("subject").value.trim();
+let message = document.getElementById("message").value.trim();
+
+let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+// clear errors
+document.querySelectorAll(".error").forEach(e => e.textContent="");
+
+if(name === ""){
+document.getElementById("nameError").textContent="Name is required";
+isValid=false;
+}
+
+if(email === ""){
+document.getElementById("emailError").textContent="Email is required";
+isValid=false;
+}
+else if(!emailPattern.test(email)){
+document.getElementById("emailError").textContent="Enter a valid email address";
+isValid=false;
+}
+
+if(phone === ""){
+document.getElementById("phoneError").textContent="Phone number is required";
+isValid=false;
+}
+
+if(subject === ""){
+document.getElementById("subjectError").textContent="Subject is required";
+isValid=false;
+}
+
+if(message === ""){
+document.getElementById("messageError").textContent="Message is required";
+isValid=false;
+}
+
+if(isValid){
+window.location.href="404.html";
+}
+
+});
+</script>
+<script src="./js/script.js"></script>
+</body>
+</html>
+</body>
+</html>

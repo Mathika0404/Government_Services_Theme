@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Marketing Website</title>
+
+  <!-- GOOGLE FONT -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+
+  <!-- REMIX ICON -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+<!-- FONT AWESOME -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./css/style2.css">
+</head>
+<body>
+
+<!-- LOGIN MODAL -->
+<div id="loginModal" class="login-modal">
+
+  <div class="login-box">
+    <span class="close-btn" onclick="closeLogin()">&times;</span>
+
+    <!-- TITLE -->
+    <h2 id="formTitle">Citizen Services Portal Login</h2>
+    <p id="formSubtitle">Access government services, applications & public records</p>
+
+    <form id="authForm" onsubmit="handleAuthSubmit(event)">
+
+      <!-- SIGNUP ONLY FIELD -->
+      <input type="text"
+             id="departmentName"
+             placeholder="Department / Organization Name"
+             style="display:none;">
+
+      <!-- COMMON FIELDS -->
+      <input type="email"
+             placeholder="Registered Email Address"
+             required>
+
+      <input type="text"
+             placeholder="Citizen ID / Application Number"
+             required>
+
+      <!-- PASSWORD -->
+      <div class="password-field">
+        <input type="password"
+               id="loginPassword"
+               placeholder="Portal Password"
+               required>
+
+        <i class="fa-solid fa-eye-slash toggle-eye"
+           id="eyeIcon"
+           onclick="togglePassword()"></i>
+      </div>
+
+      <!-- SIGNUP ONLY FIELD -->
+      <input type="password"
+             id="confirmPassword"
+             placeholder="Confirm Password"
+             style="display:none;">
+
+      <button type="submit"
+              class="login-submit"
+              id="submitBtn">
+        Access Portal
+      </button>
+
+    </form>
+
+    <!-- SWITCH LINK -->
+    <p class="switch-text">
+      <span id="switchText">New to the citizen services portal?</span>
+      <a href="javascript:void(0)" onclick="toggleAuth()">Create account</a>
+    </p>
+
+  </div>
+
+</div>
+
+
+<!-- NAVBAR -->
+<header>
+  <nav class="navbar">
+
+    <div class="nav__header">
+      <div class="nav__logo">
+        <a href="index2.html">
+          <img src="./images/stackly_logo.webp" class="logo-img" alt="logo">
+        </a>
+      </div>
+
+      <div class="nav__menu__btn" id="menu-btn">
+        <i class="ri-menu-line"></i>
+      </div>
+    </div>
+
+    <ul class="nav__links" id="nav-links">
+      <li class="dropdown">
+        <a href="index2.html">Home</a>
+        <i class="ri-arrow-down-s-line arrow"></i>
+        <ul class="dropdown-menu">
+          <li><a href="index.html">Home Page 1</a></li>
+        </ul>
+      </li>
+
+      <li><a href="service.html">Service</a></li>
+      <li><a href="scheme.html">Schemes</a></li>
+      <li><a href="contact2.html">Contact</a></li>
+            <li>
+  <a href="javascript:void(0)" onclick="openLogin()">
+    Login
+  </a>
+</li>
+    </ul>
+
+  </nav>
+</header>
+
+<section class="hero">
+
+  <!-- Background GIF -->
+  <img 
+    src="./images/hero_section.gif" 
+    alt="Chennai Government Services Background"
+    class="hero-gif"
+  >
+
+  <!-- Overlay -->
+  <div class="hero-overlay"></div>
+
+  <!-- Content -->
+ <div class="hero-content">
+
+  <h1 class="reveal delay-1">
+    Building <span>Smart & Transparent Governance</span>
+  </h1>
+
+  <h3 class="reveal delay-2">
+    Digital Services for Citizens, Businesses & Communities
+  </h3>
+
+<p class="reveal delay-3">
+Delivering transparent, efficient, and citizen-focused digital services
+to support smart governance
+</p>
+
+</div>
+
+</section>
+
+<section class="governance-section">
+
+<div class="gov-header">
+<span class="gov-tag">GOVERNANCE & ADMINISTRATION</span>
+<h2>Explore City Governance</h2>
+</div>
+
+<div class="gov-cards">
+
+<!-- CARD 1 -->
+<div class="gov-card">
+<img src="./images/about4.webp" alt="">
+<div class="gov-box">
+<i class="ri-government-line"></i>
+<h4>City Governance</h4>
+<p>Administration</p>
+</div>
+</div>
+
+<!-- CARD 2 -->
+<div class="gov-card">
+<img src="images/home2_image2.webp" alt="">
+<div class="gov-box">
+<i class="ri-community-line"></i>
+<h4>Public Services</h4>
+<p>Citizen Programs</p>
+</div>
+</div>
+
+<!-- CARD 3 -->
+<div class="gov-card">
+<img src="images/home2_image1.webp" alt="">
+<div class="gov-box">
+<i class="ri-file-chart-line"></i>
+<h4>Budget & Policy</h4>
+<p>City Development</p>
+</div>
+</div>
+
+</div>
+</section>
+
+<section class="gov-news-section">
+
+<div class="news-header">
+
+  <div class="news-tabs">
+    <button class="active">GOVERNMENT NEWS</button>
+  </div>
+
+  <div class="featured-head">
+    <h3 class="featured-title">Governance Programs</h3>
+
+    <div class="slider-dots">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+
+  </div>
+
+</div>
+
+
+<div class="news-wrapper">
+
+<!-- NEWS CARD 1 -->
+<div class="news-card">
+  <div class="video-thumb">
+    <img src="images/gif1.gif">
+    <span class="play-icon">&#9658;</span>
+  </div>
+  <span class="news-date">APR 12, 2024</span>
+  <p>Municipal Corporation launches new citizen grievance portal.</p>
+</div>
+
+<!-- NEWS CARD 2 -->
+<div class="news-card">
+  <div class="video-thumb">
+    <img src="images/gif2.gif">
+    <span class="play-icon">&#9658;</span>
+  </div>
+  <span class="news-date">MAY 03, 2024</span>
+  <p>City council approves smart traffic management initiative.</p>
+</div>
+
+<!-- NEWS CARD 3 -->
+<div class="news-card">
+  <div class="video-thumb">
+    <img src="images/gif3.gif">
+    <span class="play-icon">&#9658;</span>
+  </div>
+  <span class="news-date">JUN 18, 2024</span>
+  <p>Mayor announces new urban development and infrastructure projects.</p>
+</div>
+
+
+<!-- FEATURED SLIDER -->
+<div class="featured-slider">
+
+  <div class="featured-card slide active">
+    <img src="images/news1.webp">
+    <h4>Digital Governance Initiative</h4>
+    <p>Improving transparency and citizen engagement through digital services.</p>
+  </div>
+
+  <div class="featured-card slide">
+    <img src="images/news2.webp">
+    <h4>Smart City Infrastructure</h4>
+    <p>Developing modern urban infrastructure for sustainable city growth.</p>
+  </div>
+
+  <div class="featured-card slide">
+    <img src="images/new3.webp">
+    <h4>Public Service Portal</h4>
+    <p>Online services enabling faster government service delivery.</p>
+  </div>
+
+</div>
+
+</div>
+
+
+<div class="view-news">
+<a href="404.html">View All Government News</a>
+</div>
+
+</section>
+
+<section class="gov-quick-links">
+
+  <h2 class="quick-title">Government Quick Links</h2>
+
+  <div class="quick-wrapper">
+
+    <!-- LEFT SIDE -->
+    <div class="quick-left">
+
+<div class="quick-item">
+  <img src="images/service1.webp">
+  <div>
+    <h4><a href="404.html">Insurance Administration</a></h4>
+    <p>An independent agency regulating motor insurance industry and protecting consumers.</p>
+  </div>
+</div>
+
+<div class="quick-item">
+  <img src="images/service2.webp">
+  <div>
+    <h4><a href="404.html">Tax Inquiry / Payment</a></h4>
+    <p>Submit tax payments and check financial records through the government portal.</p>
+  </div>
+</div>
+
+<div class="quick-item">
+  <img src="images/service3.webp">
+  <div>
+    <h4><a href="404.html">Free Bus Fare</a></h4>
+    <p>Special transport benefits for senior citizens and persons with disabilities.</p>
+  </div>
+</div>
+
+<div class="quick-item">
+  <img src="images/service4.webp">
+  <div>
+    <h4><a href="404.html">Vehicle Impound System</a></h4>
+    <p>Track vehicles using the impound tracking system (VTS).</p>
+  </div>
+</div>
+
+<div class="quick-item">
+  <img src="images/service5.webp">
+  <div>
+    <h4><a href="404.html">Emergency Response</a></h4>
+    <p>Emergency services responding quickly to disasters and critical incidents.</p>
+  </div>
+</div>
+
+<div class="quick-item">
+  <img src="images/service6.webp">
+  <div>
+    <h4><a href="404.html">Auction / Spot Bid Sale</a></h4>
+    <p>Government property auction listings and bidding opportunities.</p>
+  </div>
+</div>
+
+    </div>
+
+    <!-- RIGHT SIDE -->
+<div class="quick-right">
+  <ul>
+    <li><a href="404.html">CountyStat</a></li>
+    <li><a href="404.html">Spending Disclosure</a></li>
+    <li><a href="404.html">Consumer Protection Services</a></li>
+    <li><a href="404.html">Legislative Information System</a></li>
+    <li><a href="404.html">County Maps</a></li>
+    <li><a href="404.html">Seniors and Disabled Free Fare</a></li>
+    <li><a href="404.html">Transfer / Recordation Tax</a></li>
+    <li><a href="404.html">Vehicle Impound System</a></li>
+    <li><a href="404.html">Vendor MBE Online Registration</a></li>
+    <li><a href="404.html">RoadTracking 2011</a></li>
+  </ul>
+</div>
+
+  </div>
+
+
+</section>
+
+<footer class="gov-footer">
+
+  <div class="footer-container">
+
+    <!-- ABOUT CITY -->
+    <div class="footer-col">
+      <h3>STACKLY</h3>
+      <p>
+        Serving the citizens with transparency and dedication.
+        Providing essential civic services, public welfare programs,
+        and smart city initiatives for sustainable development.
+      </p>
+    </div>
+
+        <!-- QUICK LINKS -->
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index2.html">Home</a></li>
+        <li><a href="service.html">Service</a></li>
+        <li><a href="scheme.html">Schemes</a></li>
+        <li><a href="contact2.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- CITY SERVICES -->
+    <div class="footer-col">
+      <h4>City Services</h4>
+      <ul>
+        <li><a href="404.html">Property Tax</a></li>
+        <li><a href="404.html">Water & Sewerage</a></li>
+        <li><a href="404.html">Public Health</a></li>
+        <li><a href="404.html">Urban Planning</a></li>
+        <li><a href="404.html">Birth & Death Certificates</a></li>
+      </ul>
+    </div>
+
+    <!-- MAP -->
+    <div class="footer-col">
+      <h4>Find Us</h4>
+      <div class="map-box">
+        <iframe 
+          src="https://www.google.com/maps?q=Chennai%20Corporation%20Office&output=embed"
+          width="100%" 
+          height="150" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy">
+        </iframe>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- BOTTOM -->
+  <div class="footer-bottom">
+    <p>© 2026 Chennai City Corporation | All Rights Reserved</p>
+  </div>
+
+</footer>
+<script>
+
+const slides = document.querySelectorAll(".slide");
+const dots = document.querySelectorAll(".dot");
+
+let currentSlide = 0;
+
+function showSlide(index){
+
+slides.forEach((slide) => {
+slide.classList.remove("active");
+});
+
+dots.forEach((dot) => {
+dot.classList.remove("active");
+});
+
+slides[index].classList.add("active");
+dots[index].classList.add("active");
+
+}
+
+
+function nextSlide(){
+
+currentSlide++;
+
+if(currentSlide >= slides.length){
+currentSlide = 0;
+}
+
+showSlide(currentSlide);
+
+}
+
+
+/* AUTO SLIDE EVERY 3 SECONDS */
+
+setInterval(nextSlide,3000);
+
+
+/* DOT CLICK FUNCTION */
+
+dots.forEach((dot,index)=>{
+dot.addEventListener("click",()=>{
+currentSlide=index;
+showSlide(currentSlide);
+});
+});
+
+</script>
+<script src="./js/script.js"></script>
+</body>
+</html>

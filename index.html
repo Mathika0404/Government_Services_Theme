@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Marketing Website</title>
+
+  <!-- GOOGLE FONT -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+
+  <!-- REMIX ICON -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+<!-- FONT AWESOME -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+<!-- PRELOADER -->
+<div id="preloader">
+  <img src="./images/preloader.gif" alt="Loading...">
+</div>
+
+<!-- LOGIN MODAL -->
+<div id="loginModal" class="login-modal">
+
+  <div class="login-box">
+    <span class="close-btn" onclick="closeLogin()">&times;</span>
+
+    <!-- TITLE -->
+    <h2 id="formTitle">Citizen Services Portal Login</h2>
+    <p id="formSubtitle">Access government services, applications & public records</p>
+
+    <form id="authForm" onsubmit="handleAuthSubmit(event)">
+
+      <!-- SIGNUP ONLY FIELD -->
+      <input type="text"
+             id="departmentName"
+             placeholder="Department / Organization Name"
+             style="display:none;">
+
+      <!-- COMMON FIELDS -->
+      <input type="email"
+             placeholder="Registered Email Address"
+             required>
+
+      <input type="text"
+             placeholder="Citizen ID / Application Number"
+             required>
+
+      <!-- PASSWORD -->
+      <div class="password-field">
+        <input type="password"
+               id="loginPassword"
+               placeholder="Portal Password"
+               required>
+
+        <i class="fa-solid fa-eye-slash toggle-eye"
+           id="eyeIcon"
+           onclick="togglePassword()"></i>
+      </div>
+
+      <!-- SIGNUP ONLY FIELD -->
+      <input type="password"
+             id="confirmPassword"
+             placeholder="Confirm Password"
+             style="display:none;">
+
+      <button type="submit"
+              class="login-submit"
+              id="submitBtn">
+        Access Portal
+      </button>
+
+    </form>
+
+    <!-- SWITCH LINK -->
+    <p class="switch-text">
+      <span id="switchText">New to the citizen services portal?</span>
+      <a href="javascript:void(0)" onclick="toggleAuth()">Create account</a>
+    </p>
+
+  </div>
+
+</div>
+
+<!-- NAVBAR -->
+<header>
+  <nav class="navbar">
+
+    <div class="nav__header">
+      <div class="nav__logo">
+        <a href="index.html">
+          <img src="./images/stackly_logo.webp" class="logo-img" alt="logo">
+        </a>
+      </div>
+
+      <div class="nav__menu__btn" id="menu-btn">
+        <i class="ri-menu-line"></i>
+      </div>
+    </div>
+
+    <ul class="nav__links" id="nav-links">
+      <li class="dropdown">
+        <a href="index.html">Home</a>
+        <i class="ri-arrow-down-s-line arrow"></i>
+        <ul class="dropdown-menu">
+          <li><a href="index2.html">Home Page 2</a></li>
+        </ul>
+      </li>
+
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Department</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="dashboard.html">Dashboard</a></li>
+            <li>
+  <a href="javascript:void(0)" onclick="openLogin()">
+    Login
+  </a>
+</li>
+    </ul>
+
+  </nav>
+</header>
+
+<section class="hero">
+
+  <!-- Background GIF -->
+  <img 
+    src="./images/hero_section.gif" 
+    alt="Chennai Government Services Background"
+    class="hero-gif"
+  >
+
+  <!-- Overlay -->
+  <div class="hero-overlay"></div>
+
+  <!-- Content -->
+  <div class="hero-content">
+    <h1 class="reveal delay-1">
+      Empowering <span>Your Digital Governance</span>
+    </h1>
+
+    <h3 class="reveal delay-2">
+      Smart, Transparent & Citizen-Centric Services
+    </h3>
+
+    <p class="reveal delay-3">
+      Supporting Government of Chennai with modern digital solutions,
+      public information systems, online services, and data-driven
+      platforms that improve accessibility, efficiency, and citizen engagement.
+    </p>
+  </div>
+
+</section>
+
+<section class="hero-services">
+
+  <div class="service-card">
+    <i class="ri-government-line"></i>
+    <h4>Your Government</h4>
+    <!-- <p>Official departments, schemes and public services information.</p> -->
+  </div>
+
+  <div class="service-card">
+    <i class="ri-briefcase-line"></i>
+    <h4>Jobs & Employment</h4>
+    <!-- <p>Government jobs, skill development and employment programs.</p> -->
+  </div>
+
+  <div class="service-card">
+    <i class="ri-building-line"></i>
+    <h4>Business & Industry</h4>
+    <!-- <p>Licenses, MSME support, investments and startup initiatives.</p> -->
+  </div>
+
+  <div class="service-card">
+    <i class="ri-bus-line"></i>
+    <h4>Roads & Transport</h4>
+    <!-- <p>Public transport, traffic updates and infrastructure projects.</p> -->
+  </div>
+
+  <div class="service-card">
+    <i class="ri-calendar-event-line"></i>
+    <h4>Culture & Events</h4>
+    <!-- <p>Government events, festivals, heritage and public programs.</p> -->
+  </div>
+
+  <div class="service-card">
+    <i class="ri-scales-3-line"></i>
+    <h4>Law & Justice</h4>
+    <!-- <p>Legal services, public safety and citizen rights.</p> -->
+  </div>
+
+</section>
+
+<section class="gov-process zigzag">
+
+  <div class="process-header">
+    <span class="tag">CITY GOVERNANCE</span>
+    <h2>How Our City Administration Works</h2>
+    <p>Transparent, structured and citizen-centric public service delivery.</p>
+  </div>
+
+  <div class="zigzag-wrapper">
+
+    <div class="zigzag-item up">
+      <div class="circle">
+        <span class="number">01</span>
+        <h4>Citizen Request</h4>
+        <p>Citizens submit applications, grievances or service requests.</p>
+      </div>
+    </div>
+
+    <div class="zigzag-item down">
+      <div class="circle">
+        <span class="number">02</span>
+        <h4>Department Review</h4>
+        <p>Concerned departments review documents and verify details.</p>
+      </div>
+    </div>
+
+    <div class="zigzag-item up">
+      <div class="circle">
+        <span class="number">03</span>
+        <h4>Approval & Action</h4>
+        <p>Approvals are granted and on-ground execution begins.</p>
+      </div>
+    </div>
+
+    <div class="zigzag-item down">
+      <div class="circle">
+        <span class="number">04</span>
+        <h4>Status Update</h4>
+        <p>Citizens receive real-time updates until completion.</p>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<section class="gov-vision">
+
+  <!-- SECTION HEADING -->
+  <div class="gov-header">
+    <h2>Smart Governance in Action</h2>
+    <p>
+      Ensuring accountability, efficiency, and timely services.
+    </p>
+  </div>
+
+  <!-- CONTENT ROW -->
+  <div class="gov-row">
+
+    <!-- IMAGE -->
+    <div class="gov-image">
+      <img src="./images/image1.webp" alt="Government Planning Meeting">
+    </div>
+
+    <!-- CONTENT -->
+    <div class="gov-content">
+      <h3>Our Mission</h3>
+      <p>
+        Our mission is to ensure efficient public service delivery,
+        transparent administration, and inclusive development for
+        all citizens. We aim to leverage digital governance, data-driven
+        decision-making, and community engagement to improve quality of life.
+      </p>
+      <a href="404.html" class="gov-btn">Read More</a>
+    </div>
+
+    <!-- IMAGE -->
+    <div class="gov-image">
+      <img src="./images/image2.webp" alt="Public Service Review">
+    </div>
+
+    <!-- CONTENT -->
+    <div class="gov-content">
+      <h3>Our Goals</h3>
+      <p>
+        We focus on strengthening infrastructure, enhancing public safety,
+        improving accessibility to government services, and promoting
+        sustainable economic growth while maintaining transparency
+        and accountability.
+      </p>
+      <a href="404.html" class="gov-btn">Read More</a>
+    </div>
+
+  </div>
+
+</section>
+
+<section class="gov-stats">
+
+  <!-- Background GIF -->
+  <img src="./images/video1.gif" class="stats-bg" alt="City Background">
+
+  <div class="stats-overlay"></div>
+
+  <div class="stats-wrapper">
+
+    <div class="stat-box">
+      <i class="ri-group-line"></i>
+<h2 class="counter" data-target="12500" data-suffix="K">0</h2>
+      <p>Total Citizens Served</p>
+    </div>
+
+    <div class="stat-box">
+      <i class="ri-building-4-line"></i>
+<h2 class="counter" data-target="3200" data-suffix="K">0</h2>
+      <p>Public Service Centers</p>
+    </div>
+
+    <div class="stat-box">
+      <i class="ri-road-map-line"></i>
+<h2 class="counter" data-target="5400" data-suffix="K">0</h2>
+      <p>Kilometers of Roads Maintained</p>
+    </div>
+
+    <div class="stat-box">
+      <i class="ri-shield-check-line"></i>
+<h2 class="counter" data-target="100" data-suffix="%">0</h2>
+      <p>% Service Satisfaction Rate</p>
+    </div>
+
+  </div>
+
+</section>
+
+<section class="city-events">
+
+    <div class="process-header">
+    <span class="tag">CITY EVENTS</span>
+    </div>
+
+  <div class="events-container">
+    
+
+    <!-- LEFT SIDE -->
+    <div class="recent-events">
+      <h2>Recent Government Events</h2>
+
+      <div class="main-event">
+        <img src="images/event9.webp" alt="">
+        <div class="event-overlay">
+          <h3>City Development Summit 2026</h3>
+          <p>📍 Corporation Hall</p>
+        </div>
+      </div>
+
+      <div class="event-thumbs">
+        <img src="images/event1.webp">
+        <img src="images/event2.webp">
+        <img src="images/event3.webp">
+        <img src="images/event4.webp">
+      </div>
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="upcoming-events">
+      <h2>Upcoming Schedules</h2>
+
+      <!-- TABS -->
+      <div class="tabs">
+        <button class="tab-btn active" onclick="showTab('events')">Next Events</button>
+        <button class="tab-btn" onclick="showTab('meetings')">Meetings</button>
+      </div>
+
+      <!-- EVENTS TAB -->
+      <div id="events" class="tab-content active">
+
+        <div class="schedule-card">
+          <div class="date">
+            <h4>12</h4>
+            <span>APR 2026</span>
+            <p>10:00 AM</p>
+          </div>
+          <img src="images/event5.webp">
+          <div class="info">
+            <h5>Public Welfare Awareness Program</h5>
+            <p>📍 Tambaram, Chennai</p>
+          </div>
+          <a href="404.html">
+          <button class="join-btn">Join</button>
+          </a>
+        </div>
+
+        <div class="schedule-card">
+          <div class="date">
+            <h4>18</h4>
+            <span>MAY 2026</span>
+            <p>09:30 AM</p>
+          </div>
+          <img src="images/event6.webp">
+          <div class="info">
+            <h5>Clean City Campaign Launch</h5>
+            <p>📍 Velachery, Chennai</p>
+          </div>
+          <a href="404.html">
+          <button class="join-btn">Join</button>
+          </a>
+        </div>
+
+        <div class="schedule-card">
+  <div class="date">
+    <h4>05</h4>
+    <span>JUN 2026</span>
+    <p>11:00 AM</p>
+  </div>
+  <img src="images/event7.webp">
+  <div class="info">
+    <h5>Smart Traffic Management Awareness Drive</h5>
+    <p>📍 T. Nagar, Chennai</p>
+  </div>
+            <a href="404.html">
+          <button class="join-btn">Join</button>
+          </a>
+</div>
+
+<div class="schedule-card">
+  <div class="date">
+    <h4>21</h4>
+    <span>JUL 2026</span>
+    <p>04:30 PM</p>
+  </div>
+  <img src="images/event8.webp">
+  <div class="info">
+    <h5>Green Chennai Tree Plantation Program</h5>
+    <p>📍 Anna Nagar, Chennai</p>
+  </div>
+          <a href="404.html">
+          <button class="join-btn">Join</button>
+          </a>
+</div>
+      </div>
+
+      <!-- MEETINGS TAB -->
+      <div id="meetings" class="tab-content">
+
+        <div class="meeting-box">
+          <h4>Urban Planning Committee Meeting</h4>
+          <p>Date: 15 April 2026</p>
+          <p>Time: 11:00 AM</p>
+          <p>Venue: Greater Chennai Corporation Office</p>
+          <p>Agenda: Infrastructure & Road Development Discussion</p>
+        </div>
+
+        <div class="meeting-box">
+          <h4>Health & Sanitation Board Meeting</h4>
+          <p>Date: 22 April 2026</p>
+          <p>Time: 02:00 PM</p>
+          <p>Venue: Public Health Department Hall</p>
+          <p>Agenda: City-wide Sanitation Improvement Plan</p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<footer class="gov-footer">
+
+  <div class="footer-container">
+
+    <!-- ABOUT CITY -->
+    <div class="footer-col">
+      <h3>STACKLY</h3>
+      <p>
+        Serving the citizens with transparency and dedication.
+        Providing essential civic services, public welfare programs,
+        and smart city initiatives for sustainable development.
+      </p>
+    </div>
+
+        <!-- QUICK LINKS -->
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="department.html">Department</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- CITY SERVICES -->
+    <div class="footer-col">
+      <h4>City Services</h4>
+      <ul>
+        <li><a href="404.html">Property Tax</a></li>
+        <li><a href="404.html">Water & Sewerage</a></li>
+        <li><a href="404.html">Public Health</a></li>
+        <li><a href="404.html">Urban Planning</a></li>
+        <li><a href="404.html">Birth & Death Certificates</a></li>
+      </ul>
+    </div>
+
+    <!-- MAP -->
+    <div class="footer-col">
+      <h4>Find Us</h4>
+      <div class="map-box">
+        <iframe 
+          src="https://www.google.com/maps?q=Chennai%20Corporation%20Office&output=embed"
+          width="100%" 
+          height="150" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy">
+        </iframe>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- BOTTOM -->
+  <div class="footer-bottom">
+    <p>© 2026 Chennai City Corporation | All Rights Reserved</p>
+  </div>
+
+</footer>
+
+<script src="./js/script.js"></script>
+</body>
+</html>
