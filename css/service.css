@@ -1063,6 +1063,7 @@ transition:.4s;
 
 .service-card:hover{
 transform:translateY(-5px);
+cursor:auto;
 }
 
 /* CLICK EFFECT */
@@ -1149,6 +1150,11 @@ font-size:11px;
   background:#000;
   color:#fff;
   padding:60px 6% 20px;
+}
+
+.footer-logo img{
+  width:140px;
+  margin-bottom:15px;
 }
 
 .footer-container{

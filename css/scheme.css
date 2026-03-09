@@ -68,7 +68,6 @@ header{
   color:#000;   
 }
 
-
 .logo-img{width:180px;
   height: auto;
 }
@@ -244,6 +243,7 @@ padding: 15px 0;
     font-size: 1.6rem;
   }
 }
+
 
 /* LOGIN MODAL BACKGROUND */
 .login-modal{
@@ -956,6 +956,11 @@ font-size:13px;
   background:#000;
   color:#fff;
   padding:60px 6% 20px;
+}
+
+.footer-logo img{
+  width:140px;
+  margin-bottom:15px;
 }
 
 .footer-container{

@@ -54,9 +54,23 @@ header{
   width: 100%;
 }
 
+/* DROPDOWN FIX WHEN NAVBAR SCROLLED */
+
+.navbar.scrolled .dropdown-menu{
+  background:#fff;
+}
+
+.navbar.scrolled .dropdown-menu a{
+  color:#000;
+}
+
 .navbar.scrolled{
   background:#fff;
   box-shadow:0 10px 30px rgba(0,0,0,.3);
+}
+
+.navbar.scrolled .nav__menu__btn{
+  color:#000;
 }
 
 /* Change menu text color when scrolled */
@@ -1310,6 +1324,11 @@ padding: 15px 0;
   background:#000;
   color:#fff;
   padding:60px 6% 20px;
+}
+
+.footer-logo img{
+  width:140px;
+  margin-bottom:15px;
 }
 
 .footer-container{

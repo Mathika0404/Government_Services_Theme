@@ -244,6 +244,7 @@ padding: 15px 0;
   }
 }
 
+
 /* LOGIN MODAL BACKGROUND */
 .login-modal{
   display: none;
@@ -932,6 +933,11 @@ padding: 15px 0;
   background:#000;
   color:#fff;
   padding:60px 6% 20px;
+}
+
+.footer-logo img{
+  width:140px;
+  margin-bottom:15px;
 }
 
 .footer-container{

@@ -577,6 +577,11 @@ transform:translate(-50%,-50%) scale(1.05);
   padding:60px 6% 20px;
 }
 
+.footer-logo img{
+  width:140px;
+  margin-bottom:15px;
+}
+
 .footer-container{
   display:grid;
   grid-template-columns:1.5fr 1fr 1fr 1fr 1fr;
