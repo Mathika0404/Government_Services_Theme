@@ -25,9 +25,9 @@
 <body>
 
 <!-- PRELOADER -->
-<div id="preloader">
+<!-- <div id="preloader">
   <img src="./images/preloader.gif" alt="Loading...">
-</div>
+</div> -->
 
 <!-- LOGIN MODAL -->
 <div id="loginModal" class="login-modal">
@@ -470,6 +470,126 @@
 
 </section>
 
+<section class="schemes-section">
+
+  <h2 class="schemes-heading">Government Schemes & Programs</h2>
+  <p class="schemes-subtitle">Explore welfare programs designed for citizens</p>
+
+  <div class="schemes-container">
+
+    <!-- CARD 1 -->
+    <div class="scheme-card">
+      <h3>Education Support Scheme</h3>
+      <p>Financial assistance for students pursuing higher education.</p>
+      <span>Eligibility: Students</span>
+      <button onclick="go404()">Apply Now</button>
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="scheme-card">
+      <h3>Healthcare Benefit Program</h3>
+      <p>Free medical services and insurance support for families.</p>
+      <span>Eligibility: Families</span>
+      <button onclick="go404()">Apply Now</button>
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="scheme-card">
+      <h3>Farmer Subsidy Scheme</h3>
+      <p>Subsidies and financial support for agricultural development.</p>
+      <span>Eligibility: Farmers</span>
+      <button onclick="go404()">Apply Now</button>
+    </div>
+
+    <!-- CARD 4 -->
+    <div class="scheme-card">
+      <h3>Women Empowerment Program</h3>
+      <p>Support programs for women entrepreneurs and self-employment.</p>
+      <span>Eligibility: Women</span>
+      <button onclick="go404()">Apply Now</button>
+    </div>
+
+    <!-- CARD 5 -->
+<div class="scheme-card">
+  <h3>Senior Citizen Welfare Scheme</h3>
+  <p>Financial support and healthcare benefits for senior citizens to ensure a secure and healthy life.</p>
+  <span>Eligibility: Senior Citizens</span>
+  <button onclick="go404()">Apply Now</button>
+</div>
+
+<!-- CARD 6 -->
+<div class="scheme-card">
+  <h3>Startup & Business Support Program</h3>
+  <p>Funding assistance and mentorship programs to promote small businesses and startups.</p>
+  <span>Eligibility: Entrepreneurs</span>
+  <button onclick="go404()">Apply Now</button>
+</div>
+
+  </div>
+
+</section>
+
+<section class="gov-faq-section">
+
+  <h2 class="gov-faq-heading">Frequently Asked Questions</h2>
+  <p class="gov-faq-subtitle">Find answers to common queries about our services</p>
+
+  <div class="gov-faq-container">
+
+    <div class="gov-faq-item">
+      <div class="gov-faq-question">
+        <h3>How can I apply for government services online?</h3>
+        <span class="icon">+</span>
+      </div>
+      <p class="gov-faq-answer">
+        You can apply through our official portal by selecting the required service, filling out the application form, and submitting the necessary documents online.
+      </p>
+    </div>
+
+    <div class="gov-faq-item">
+      <div class="gov-faq-question">
+        <h3>How do I check my application status?</h3>
+        <span class="icon">+</span>
+      </div>
+      <p class="gov-faq-answer">
+        Visit the “Track Application” section and enter your reference number to view the current status of your request.
+      </p>
+    </div>
+
+    <div class="gov-faq-item">
+      <div class="gov-faq-question">
+        <h3>What documents are required for applying?</h3>
+        <span class="icon">+</span>
+      </div>
+      <p class="gov-faq-answer">
+        Required documents vary by service but typically include identity proof, address proof, and relevant certificates. Please check the specific service page for details.
+      </p>
+    </div>
+
+    <div class="gov-faq-item">
+      <div class="gov-faq-question">
+        <h3>Is my personal information safe and protected?</h3>
+        <span class="icon">+</span>
+      </div>
+      <p class="gov-faq-answer">
+        Yes, we follow strict security and privacy policies to ensure that your personal data is safe and protected from unauthorized access.
+      </p>
+    </div>
+
+    <div class="gov-faq-item">
+      <div class="gov-faq-question">
+        <h3>Who can I contact for help or support?</h3>
+        <span class="icon">+</span>
+      </div>
+      <p class="gov-faq-answer">
+        You can reach out through our helpline number, email support, or submit a grievance form available on the contact page.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
 <footer class="gov-footer">
 
   <div class="footer-container">
@@ -557,5 +677,40 @@
 </footer>
 
 <script src="./js/script.js"></script>
+<script>
+  const govFaqs = document.querySelectorAll(".gov-faq-item");
+
+govFaqs.forEach(faq => {
+  const question = faq.querySelector(".gov-faq-question");
+  const answer = faq.querySelector(".gov-faq-answer");
+  const icon = faq.querySelector(".icon");
+
+  question.addEventListener("click", () => {
+
+    govFaqs.forEach(item => {
+      if(item !== faq){
+        item.classList.remove("active");
+        item.querySelector(".gov-faq-answer").style.maxHeight = null;
+        item.querySelector(".icon").innerText = "+";
+      }
+    });
+
+    faq.classList.toggle("active");
+
+    if(faq.classList.contains("active")){
+      answer.style.maxHeight = answer.scrollHeight + "px";
+      icon.innerText = "−";
+    } else {
+      answer.style.maxHeight = null;
+      icon.innerText = "+";
+    }
+
+  });
+});
+
+function go404(){
+  window.location.href="404.html";
+}
+</script>
 </body>
 </html>

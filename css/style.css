@@ -1319,6 +1319,237 @@ padding: 15px 0;
 
 }
 
+/* SECTION */
+.schemes-section{
+  padding:80px 20px;
+  background:#f5f7fa;
+  text-align:center;
+}
+
+/* HEADING */
+.schemes-heading{
+  font-size:34px;
+  margin-bottom:10px;
+}
+
+.schemes-subtitle{
+  color:#555;
+  margin-bottom:50px;
+}
+
+/* GRID */
+.schemes-container{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+  gap:25px;
+  max-width:1100px;
+  margin:auto;
+}
+
+/* CARD */
+.scheme-card{
+  background:#fff;
+  padding:25px;
+  border-radius:15px;
+  text-align:left;
+  transition:0.3s;
+  box-shadow:0 5px 20px rgba(0,0,0,0.05);
+  position:relative;
+}
+
+/* TITLE */
+.scheme-card h3{
+  margin-bottom:10px;
+}
+
+/* TEXT */
+.scheme-card p{
+  font-size:14px;
+  color:#555;
+  margin-bottom:15px;
+}
+
+/* ELIGIBILITY */
+.scheme-card span{
+  display:block;
+  font-size:13px;
+  color:#F44336;
+  margin-bottom:15px;
+}
+
+/* BUTTON */
+.scheme-card button{
+  background:#F44336;
+  color:#fff;
+  border:none;
+  padding:10px 20px;
+  border-radius:8px;
+  cursor:pointer;
+}
+
+/* HOVER */
+.scheme-card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 10px 30px rgba(0,0,0,0.1);
+}
+
+@media (max-width:768px){
+
+  .schemes-section{
+    padding:60px 15px;
+  }
+
+  .schemes-heading{
+    font-size:28px;
+  }
+
+  .schemes-subtitle{
+    font-size:14px;
+    margin-bottom:35px;
+  }
+
+  .schemes-container{
+    gap:20px;
+  }
+
+  .scheme-card{
+    padding:22px;
+  }
+
+  .scheme-card h3{
+    font-size:18px;
+  }
+
+  .scheme-card p{
+    font-size:13px;
+  }
+
+  .scheme-card span{
+    font-size:12px;
+  }
+
+  .scheme-card button{
+    padding:9px 18px;
+    font-size:14px;
+  }
+
+}
+
+@media (max-width:360px){
+
+  .schemes-section{
+    padding:50px 12px;
+  }
+
+  .schemes-heading{
+    font-size:22px;
+  }
+
+  .schemes-subtitle{
+    font-size:13px;
+    margin-bottom:25px;
+  }
+
+  .schemes-container{
+    grid-template-columns:1fr; /* 👈 single column */
+    gap:15px;
+  }
+
+  .scheme-card{
+    padding:20px;
+    border-radius:12px;
+  }
+
+  .scheme-card h3{
+    font-size:16px;
+  }
+
+  .scheme-card p{
+    font-size:12px;
+    line-height:1.5;
+  }
+
+  .scheme-card span{
+    font-size:11px;
+  }
+
+  .scheme-card button{
+    width:100%; /* 👈 full width button */
+    padding:10px;
+    font-size:14px;
+  }
+
+}
+
+/* SECTION */
+.gov-faq-section{
+  padding:80px 20px;
+  background:#fff;
+  text-align:center;
+}
+
+/* HEADING */
+.gov-faq-heading{
+  font-size:34px;
+  margin-bottom:10px;
+}
+
+.gov-faq-subtitle{
+  color:#555;
+  margin-bottom:50px;
+}
+
+/* CONTAINER */
+.gov-faq-container{
+  max-width:800px;
+  margin:auto;
+}
+
+/* ITEM */
+.gov-faq-item{
+  background:#fff;
+  border-radius:12px;
+  margin-bottom:15px;
+  padding:18px 20px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.05);
+  transition:0.3s;
+}
+
+/* QUESTION */
+.gov-faq-question{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  cursor:pointer;
+}
+
+.gov-faq-question h3{
+  font-size:16px;
+  margin:0;
+  text-align:left;
+}
+
+/* ICON */
+.icon{
+  font-size:22px;
+  color:#F44336;
+  transition:0.3s;
+}
+
+/* ANSWER */
+.gov-faq-answer{
+  max-height:0;
+  overflow:hidden;
+  transition:max-height 0.4s ease;
+  text-align:left;
+  color:#555;
+}
+
+/* ACTIVE */
+.gov-faq-item.active .gov-faq-answer{
+  margin-top:10px;
+}
+
 /*FOOTER SECTION*/
 .gov-footer{
   background:#000;
